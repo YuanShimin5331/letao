@@ -6,7 +6,7 @@ $(function(){
   render();
   function render(){
     // 2通过模板引擎，数据渲染
-  $.ajax({
+    $.ajax({
     type:'get',
     url:'/user/queryUser',
     data:{
@@ -36,7 +36,43 @@ $(function(){
         render();
         } 
       });
-    }
-  })
+      }
+    })
  }
+
+// 用户启用和禁用功能
+// 1.给启用或禁用注册点击事件 注册委托事件
+// 2.点击时弹出模态框
+  $("tbody").on("click",".btn",function(){
+    // 让模态框显示
+    $("#userModal").modal("show");
+
+    // 获取id
+    var id = $(this).parent().data("id");
+    // 获取btn状态
+    var isDelete = $(this).hasClass("btn-success")?0:1;
+    // console.log(id,isDelete);
+    $('.btn_confirm').off().on('click',function(){
+      $.ajax({
+        type:'post',
+        url:"/user/updateUser",
+        data:{
+          id:id,
+          isDelete:isDelete
+        },
+        success:function(info){
+          if(info.success){
+            $('#userModal').modal('hide');
+            render();
+
+          }
+
+        }
+
+      })
+    })
+
+  })
+  
+
 })
