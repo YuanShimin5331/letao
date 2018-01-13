@@ -101,6 +101,8 @@ a:link, a:visited, a:hover, a:active {
   width: 100%;
   height: 100%;
   padding-left: 180px;
+  transition: all 1s;
+  padding-top: 70px;
   /* background-color:pink; */
 
 }
@@ -131,13 +133,20 @@ a:link, a:visited, a:hover, a:active {
 }
 
 
-.container-fluid{
+/* .container-fluid{
   padding-top: 80px;
-}
+} */
 
 /* 折线图与饼图 */
 .pic_left,
 .pic_right {
   width: 45%;
   height: 400px;
+}
+
+
+/* user页面样式 */
+.table.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
 }

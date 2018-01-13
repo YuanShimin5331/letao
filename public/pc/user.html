@@ -46,15 +46,41 @@
       <!--面包屑导航-->
       <ol class="breadcrumb">
         <li><a href="#">管理系统</a></li>
-        <li class="active">首页</li>
+        <li class="active">用户管理</li>
       </ol>
-  
-  
-      <!--折线图与饼图-->
+
       <div class="lt_content">
-        <div class="pic_left pull-left"></div>
-        <div class="pic_right pull-right"></div>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <td width="10%">序号</td>
+              <td width="30%">用户名</td>
+              <td width="30%">手机号</td>
+              <td width="20%">状态</td>
+              <td width="10%">操作</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>itcast</td>
+              <td>18715658042</td>
+              <td>正常</td>
+              <td>
+                <button class="btn btn-danger btn-sm">禁用</button>
+                <button class="btn btn-success btn-sm">启用</button>
+              </td>
+            </tr>
+
+          </tbody>
+
+
+        </table>
+
       </div>
+      
+  
+   
   </div>
 </div>
 
@@ -91,8 +117,8 @@
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="lib/echarts/echarts.min.js"></script>
+
 <script src="js/common.js"></script>
-<script src="js/index.js"></script>
+<script src="js/user.js"></script>
 </body>
 </html>
