@@ -46,7 +46,8 @@
       <!--面包屑导航-->
       <ol class="breadcrumb">
         <li><a href="#">管理系统</a></li>
-        <li class="active">用户管理</li>
+        <li><a href="#">分类系统</a></li>
+        <li class="active">一级分类</li>
       </ol>
 
       <div class="lt_content">
@@ -56,16 +57,10 @@
             <tr>
               <td width="10%">序号</td>
               <td width="30%">分类名称</td>
-              
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>高跟鞋</td>
-            </tr>
-          
-
+            <!-- 挖坑 -->
           </tbody>
 
 
@@ -113,8 +108,14 @@
 
   
 <!-- 2准备模板 -->
-<script type="text/html" id="tpl">
+<script type="text/html" id="tpl2">
+  {{each rows v i}}
+    <tr>
+      <td>{{(page-1)*size+i+1}}</td>
+      <td>{{v.categoryName}}</td>
+    </tr>
 
+  {{/each}}
 </script>
 
 
